@@ -1,0 +1,22 @@
+# Binaries
+bin/
+yykitchen
+*.exe
+*.test
+*.out
+
+# Local data
+*.db
+*.sqlite
+*.sqlite3
+
+# Runtime
+server.pid
+server.log
+
+# IDE
+.idea/
+.vscode/
+
+# OS
+.DS_Store

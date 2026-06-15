@@ -1,0 +1,10 @@
+app:
+  port: "8090"
+  mode: "debug" # debug | release | test
+
+database:
+  path: "app.db"
+
+jwt:
+  secret: "change-me-in-production"
+  expire_hours: 24
