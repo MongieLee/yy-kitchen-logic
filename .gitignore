@@ -1,22 +1,57 @@
-# Binaries
+# Binaries & Build Output
 bin/
 yykitchen
 *.exe
+*.exe~
+*.dll
+*.so
+*.dylib
 *.test
 *.out
 
-# Local data
+# Test & Coverage
+*.prof
+coverage.txt
+profile.out
+
+# Local Config & Secrets
+config/config.yaml
+!config/config.example.yaml
+*.env
+*.env.*
+!.env.example
+
+# Local Data & SQLite
 *.db
+*.db-*
 *.sqlite
 *.sqlite3
 
-# Runtime
+# Runtime & Logs
 server.pid
 server.log
+*.pid
+*.log
+logs/
+tmp/
 
-# IDE
+# Uploaded Files
+uploads/*
+!uploads/.gitkeep
+
+# IDEs & AI Tools
 .idea/
 .vscode/
+*.swp
+*.swo
+*~
+.claude/
+.cursor/
+.gemini/
 
-# OS
+# Operating System Files
 .DS_Store
+.DS_Store?
+._*
+Thumbs.db
+ehthumbs.db

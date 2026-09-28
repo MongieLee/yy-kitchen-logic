@@ -1,0 +1,31 @@
+app:
+  port: "8090"
+  mode: "debug" # debug | release | test
+
+database:
+  host: "127.0.0.1"
+  port: 3306
+  user: "root"
+  password: "your-mysql-password"
+  name: "yy_recipe"
+  params: "parseTime=true&loc=Local&charset=utf8mb4"
+
+jwt:
+  secret: "change-me-in-production"
+  expire_hours: 24
+
+# APP 接口加密/签名 (/api/app/v1/*)。enabled=false 时中间件直接放行,方便本地/Scalar 调试。
+# 客户端请求需带:
+#   X-App-Id / X-Timestamp(ms) / X-Nonce / X-Sign
+#   body:  { "data": base64(iv(12B) || ciphertext || tag(16B)) }
+# 签名: base64(HMAC-SHA256(secret, ts + "\n" + nonce + "\n" + METHOD + "\n" + path + "\n" + rawBody))
+# AES-256-GCM key = SHA-256(secret)[:32]
+encryption:
+  enabled: false
+  timestamp_skew_seconds: 300
+  nonce_ttl_seconds: 600
+  apps:
+    - id: "yy-app-android"
+      secret: "replace-with-32-bytes-random-secret"
+    - id: "yy-app-ios"
+      secret: "replace-with-32-bytes-random-secret"
