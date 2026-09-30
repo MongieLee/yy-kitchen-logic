@@ -1,5 +1,6 @@
 # Binaries & Build Output
 bin/
+dist/
 yykitchen
 *.exe
 *.exe~
@@ -16,6 +17,7 @@ profile.out
 
 # Local Config & Secrets
 config/config.yaml
+config/config.prod.yaml
 !config/config.example.yaml
 *.env
 *.env.*
