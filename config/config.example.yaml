@@ -1,5 +1,5 @@
-# 字段模板。本机开发复制为 config.yaml，线上复制为 config.prod.yaml。
-# 这两份真实配置都 gitignore，不会进仓库；pack.sh 打包时会把 config.prod.yaml 打进发布包。
+# 字段模板。本机开发用 config.yaml，线上用 config.prod.yaml。
+# pack.sh 打包时会把 config.prod.yaml 打进发布包。
 
 app:
   port: "8090"

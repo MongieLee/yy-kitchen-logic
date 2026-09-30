@@ -16,9 +16,6 @@ coverage.txt
 profile.out
 
 # Local Config & Secrets
-config/config.yaml
-config/config.prod.yaml
-!config/config.example.yaml
 *.env
 *.env.*
 !.env.example
